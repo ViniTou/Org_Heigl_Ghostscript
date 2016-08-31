@@ -243,6 +243,8 @@ class Ghostscript
             $name = $this -> getBasePath() . DIRECTORY_SEPARATOR . $name;
         }
         $this -> _outfile = $name;
+
+        return $this;
     }
 
     /**
@@ -493,6 +495,8 @@ class Ghostscript
             $device = new $classname();
         }
         $this -> _device = $device;
+
+        return $this;
     }
 
     /**
@@ -549,7 +553,7 @@ class Ghostscript
 
     /**
      * Set a page-Range
-     *  
+     *
      * @param $startPage
      * @param $endPage
      *
